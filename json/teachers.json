@@ -1,0 +1,32 @@
+{
+  "teachers": [
+    {
+      "id": 0,
+      "name": "Teacher1",
+      "lastname": "Teacher1",
+      "lecture": "SoftwareDocDesign",
+      "rating": "5"
+    },
+    {
+      "id": 2,
+      "name": "Teacher2",
+      "lastname": "Lastname2",
+      "lecture": "Neworking",
+      "rating": "5"
+    },
+    {
+      "id": 3,
+      "name": "Teacher3",
+      "lastname": "Teacher3",
+      "lecture": "Architector",
+      "rating": "5"
+    },
+    {
+      "id": 4,
+      "name": "Teacher4",
+      "lastname": "Teacher4",
+      "lecture": "DigitalSignalProcessing",
+      "rating": "5"
+    }
+  ]
+}
