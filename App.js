@@ -1,15 +1,8 @@
 import React, { Component } from "react";
 
-import {
-  StyleSheet,
-  View,
-  AppRegistry,
-  Button,
-  Text,
-  FlatList,
-} from "react-native";
+import { StyleSheet, View, AppRegistry, Text, FlatList } from "react-native";
 
-export default class App extends React.Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -17,17 +10,30 @@ export default class App extends React.Component {
     };
   }
 
-  renderItem = () => {
-    <View>
-      <Text>{item.name}</Text>
-      <Text>{item.name}</Text>
-      <Text>{item.name}</Text>
-    </View>;
+  renderItem = ({ item }) => {
+    return (
+      <View>
+        <View>
+          <Text style={{ fontSize: 18, color: "green", marginBottom: 15 }}>
+            {item.lastname}
+          </Text>
+          <Text style={{ fontSize: 18, color: "green", marginBottom: 15 }}>
+            {item.rating}
+          </Text>
+          <Text style={{ fontSize: 18, color: "green", marginBottom: 15 }}>
+            {item.name}
+          </Text>
+          <Text style={{ fontSize: 18, color: "green", marginBottom: 15 }}>
+            {item.lecture}
+          </Text>
+        </View>
+      </View>
+    );
   };
 
   componentDidMount() {
     const url =
-      "http://www.json-generator.com/api/json/get/cfBkjqdzuG?indent=2";
+      "http://www.json-generator.com/api/json/get/bVNaScGmJK?indent=2";
     fetch(url)
       .then((response) => response.json())
       .then((responseJson) => {
@@ -51,7 +57,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000",
+    backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
   },
